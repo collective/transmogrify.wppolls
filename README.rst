@@ -50,21 +50,22 @@ take care of updating your system.
 Usage
 -----
 
-Prerequisites
-^^^^^^^^^^^^^
+1. Export as CSV the following tables from your WordPress site usign the phpMyAdmin interface:
 
-Export as CSV the following tables from your WordPress site usign the phpMyAdmin interface:
-
-* wp_pollsa
-* wp_pollsq
+- wp_pollsa
+- wp_pollsq
 
 Use the following options for all:
 
-* Fields terminated by '\\t'
-* Remove CRLF characters within fields
-* Put field names in the first row
+- Fields terminated by '\\t'
+- Remove CRLF characters within fields
+- Put field names in the first row
 
 For more information see: http://stackoverflow.com/a/31460534/644075
+
+2. Edit the 'wppolls.cfg' file and set the options: 'source', 'path', 'locale' and 'transitions'
+3. On the ZMI, got to 'portal_setup/Import' and select the profile 'transmogrify.wppolls'
+4. Click on 'Import all steps' and wait for the process to finish
 
 Sections
 ========
@@ -85,10 +86,10 @@ it doesn't takes care of any information about the voters.
     transitions = open
 
 source:
-    is the path where all CSV files are stored.
+    full path to the WordPress CSV export files.
 
 path:
-    is the path (from site root) were the polls are going to be imported;
+    path, relative to the site root, of the folder where polls should be created;
     defaults to '/polls'.
 
 locale:
