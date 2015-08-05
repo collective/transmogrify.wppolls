@@ -61,7 +61,12 @@ Use the following options for all:
 - Remove CRLF characters within fields
 - Put field names in the first row
 
-For more information see: http://stackoverflow.com/a/31460534/644075
+.. figure:: https://raw.github.com/collective/transmogrify.wppolls/master/export.png
+    :align: center
+    :height: 465px
+    :width: 600px
+
+    Export from phpMyAdmin as CSV.
 
 2. Edit the 'wppolls.cfg' file and set the options: 'source', 'path', 'locale' and 'transitions'
 3. On the ZMI, got to 'portal_setup/Import' and select the profile 'transmogrify.wppolls'
